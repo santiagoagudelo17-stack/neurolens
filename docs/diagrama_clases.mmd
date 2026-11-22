@@ -1,0 +1,144 @@
+classDiagram
+    direction LR
+
+    %% ================= MODELO =================
+    class BaseDatos {
+        -conn
+        +validar_usuario(usuario, clave) dict
+        +registrar_sesion(usuario_id) datetime
+        +guardar_estudio(usuario_id, info, matriz) int
+        +listar_estudios() list
+        +cargar_matriz_estudio(id) ndarray
+        +guardar_procesamiento(usuario_id, tipo, archivo, parametros, resultado)
+        +cerrar()
+    }
+    class VolumenDicom {
+        +carpeta
+        +nombre_paciente
+        +modalidad
+        +filas
+        +columnas
+        +voxel_alto
+        +voxel_largo
+        +voxel_ancho
+        +matrices_pixeles
+        +volumen
+        +volumen_corregido
+        +cargar_carpeta()
+        +corregirAngulo(grados)
+        +restablecer()
+        +info_tabla() list
+        +info_registro() dict
+    }
+    class ProcesadorImagen {
+        +vol
+        +maximo_indice(plano) int
+        +obtener_corte(plano, indice) ndarray
+        +corte_uint8(plano, indice) ndarray
+        +rotar_corte(corte, grados)$
+        +ecualizar(corte)$
+        +binarizar(corte, umbral, kernel, tipo)$
+        +guardar_png(ruta, imagen)$
+    }
+    class SenalesCSV {
+        +df
+        +cargar(ruta)
+        +info_texto() str
+        +describe() DataFrame
+        +por_condicion(canal) dict
+        +scatter(x, y) dict
+        +diferencia_interhemisferica(a, b) dict
+    }
+    class SenalesMAT {
+        +contenido
+        +arreglo
+        +cargar(ruta) list
+        +seleccionar_llave(llave)
+        +a_2d() ndarray
+        +operar(canales, pmin, pmax, ops, fs)
+        +estadisticas(eje1, eje2)
+    }
+    class ErrorNoArreglo
+
+    %% ================= VISTA =================
+    class VentanaBase {
+        +ARCHIVO_UI
+        +WIDGETS
+        +mostrar_error()
+        +mostrar_aviso()
+        +poner_imagen(label, img)$
+    }
+    class VentanaBienvenida
+    class VentanaLogin
+    class VentanaMenu
+    class VentanaImagenes
+    class VentanaSenalesCSV
+    class VentanaSenalesMAT
+    class Graficos {
+        <<modulo>>
+        +montar_lienzo()
+        +dibujar_ecualizacion()
+        +dibujar_stem()
+        +dibujar_histograma()
+        +dibujar_scatter()
+        +dibujar_diferencia()
+        +dibujar_operacion()
+        +dibujar_boxplots()
+    }
+
+    %% ================= CONTROLADOR =================
+    class ControladorApp {
+        +usuario
+        +iniciar()
+        +ingresar()
+        +abrir_submenu(n)
+        +cerrar_sesion()
+    }
+    class ControladorImagenes {
+        +cargar_carpeta()
+        +refrescar()
+        +aplicar_rotacion()
+        +ecualizar()
+    }
+    class ControladorCSV {
+        +cargar()
+        +graficar_stem()
+        +graficar_histograma()
+        +graficar_scatter()
+        +graficar_diferencia()
+    }
+    class ControladorMAT {
+        +cargar()
+        +seleccionar_llave()
+        +operar()
+        +estadisticas()
+    }
+
+    VentanaBase <|-- VentanaBienvenida
+    VentanaBase <|-- VentanaLogin
+    VentanaBase <|-- VentanaMenu
+    VentanaBase <|-- VentanaImagenes
+    VentanaBase <|-- VentanaSenalesCSV
+    VentanaBase <|-- VentanaSenalesMAT
+
+    ControladorApp *-- ControladorImagenes
+    ControladorApp *-- ControladorCSV
+    ControladorApp *-- ControladorMAT
+    ControladorApp --> BaseDatos
+    ControladorApp --> VentanaBienvenida
+    ControladorApp --> VentanaLogin
+    ControladorApp --> VentanaMenu
+
+    ControladorImagenes --> VentanaImagenes
+    ControladorImagenes --> VolumenDicom
+    ControladorImagenes --> ProcesadorImagen
+    ControladorImagenes --> BaseDatos
+    ControladorCSV --> VentanaSenalesCSV
+    ControladorCSV --> SenalesCSV
+    ControladorMAT --> VentanaSenalesMAT
+    ControladorMAT --> SenalesMAT
+    ProcesadorImagen --> VolumenDicom
+    SenalesMAT ..> ErrorNoArreglo
+    VentanaImagenes ..> Graficos
+    VentanaSenalesCSV ..> Graficos
+    VentanaSenalesMAT ..> Graficos

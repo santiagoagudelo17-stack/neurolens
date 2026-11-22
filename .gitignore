@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+neurolens.db
+resultados/*.png
+datos/*
+!datos/LEEME.txt
+.idea/
+.vscode/
+.venv/

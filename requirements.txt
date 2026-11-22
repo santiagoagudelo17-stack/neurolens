@@ -1,0 +1,8 @@
+PyQt5==5.15.11
+pydicom>=2.4
+numpy
+scipy
+pandas
+matplotlib
+opencv-python
+python-docx

@@ -1,0 +1,5 @@
+Copie aquí (NO se sube a GitHub) las carpetas de datos del curso:
+  datos/imagenes/PPMI, Sarcoma, T2, series
+  datos/senales_csv/ERP_01.csv ... ERP_03.csv
+  datos/senales_mat/Visual_Cue.mat, Sound_Cue.mat, Sensitive_Cue.mat
+La aplicación los pide con un cuadro de diálogo, así que pueden estar en cualquier ruta.
