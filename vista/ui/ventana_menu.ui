@@ -13,12 +13,18 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow { background-color: #F4F6F9; }
+QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
+QPushButton:hover { background-color: #2563EB; }
+QLabel { color: #1E293B; font-weight: bold; }</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="labelId">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>30</y>
+      <y>40</y>
       <width>47</width>
       <height>13</height>
      </rect>
@@ -43,8 +49,8 @@
    <widget class="QLabel" name="labelRol">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>120</y>
+      <x>40</x>
+      <y>100</y>
       <width>47</width>
       <height>13</height>
      </rect>
@@ -56,8 +62,8 @@
    <widget class="QLabel" name="labelFechaHora">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>170</y>
+      <x>40</x>
+      <y>130</y>
       <width>47</width>
       <height>13</height>
      </rect>
@@ -70,9 +76,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>220</y>
-      <width>75</width>
-      <height>23</height>
+      <y>160</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -83,9 +89,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>280</y>
-      <width>75</width>
-      <height>23</height>
+      <y>200</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -96,9 +102,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>330</y>
-      <width>75</width>
-      <height>23</height>
+      <y>250</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -108,10 +114,10 @@
    <widget class="QPushButton" name="btnSubmenu4">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>390</y>
-      <width>75</width>
-      <height>23</height>
+      <x>40</x>
+      <y>290</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -121,10 +127,10 @@
    <widget class="QPushButton" name="btnCerrarSesion">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>440</y>
-      <width>75</width>
-      <height>23</height>
+      <x>40</x>
+      <y>330</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
