@@ -13,10 +13,10 @@ from config import DB_PATH, ROL_IMAGENES, ROL_SENALES
 
 USUARIOS_INICIALES = [
     # (usuario, clave, nombre, rol)
-    ("imagenes1", "img123", "Laura Gómez", ROL_IMAGENES),
-    ("imagenes2", "img456", "Carlos Ruiz", ROL_IMAGENES),
-    ("senales1", "sen123", "Marta Pérez", ROL_SENALES),
-    ("senales2", "sen456", "Andrés Toro", ROL_SENALES),
+    ("imagenes1", "img123", "Santiago Agudelo", ROL_IMAGENES),
+    ("imagenes2", "img456", "Isabella Arrieta", ROL_IMAGENES),
+    ("senales1", "sen123", "Isabela López", ROL_SENALES),
+    ("senales2", "sen456", "Carlos Andrés Guerrero", ROL_SENALES),
 ]
 
 

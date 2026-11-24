@@ -3,7 +3,7 @@
 Proyecto final · Informática II 2026-2 · Bioingeniería, Universidad de Antioquia
 Arquitectura **MVC** · **PyQt5** (interfaces en Qt Designer, cargadas con `uic.loadUi`) · **SQLite**
 
-Integrantes: _(nombres del grupo)_
+Integrantes: Santiago Agudelo, Isabella Arrieta, Isabela López, Carlos Andrés Guerrero
 
 ## Instalación (Windows, Anaconda Prompt)
 ```

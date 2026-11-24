@@ -19,6 +19,6 @@ ROLES_NOMBRE = {
 # Columnas del CSV que NO son canales EEG
 COLUMNAS_NO_CANAL = ("subject", "condition", "time_ms")
 
-# Frecuencia de muestreo por defecto para los .mat (Hz).
-# AJUSTAR con el valor del Parcial 2 (el usuario puede cambiarla en la interfaz).
+# Frecuencia de muestreo de los .mat (Hz), confirmada con el enunciado del Parcial 2.
+# El usuario puede cambiarla en la interfaz.
 FS_MAT_DEFECTO = 250
