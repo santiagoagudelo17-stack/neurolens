@@ -76,9 +76,11 @@ class SenalesMAT:
 
     def cargar(self, ruta):
         crudo = sio.loadmat(ruta)
-        self.contenido = {k: v for k, v in crudo.items() if not k.startswith("__")}
-        if not self.contenido:
+        # Se validan las variables reales (las que no empiezan con "__"), pero en el
+        # QComboBox se ofrecen TODAS las llaves, para que "No es un arreglo" pueda salir.
+        if not any(not k.startswith("__") for k in crudo):
             raise ValueError("El archivo .mat no contiene variables.")
+        self.contenido = dict(crudo)
         self.ruta, self.llave, self.arreglo = ruta, None, None
         return list(self.contenido.keys())
 
