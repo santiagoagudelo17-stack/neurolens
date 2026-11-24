@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow { background-color: #F4F6F9; }
+QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
+QPushButton:hover { background-color: #2563EB; }
+QLabel { color: #1E293B; font-weight: bold; }</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="labelTitulo">
     <property name="geometry">
