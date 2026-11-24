@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow { background-color: #F4F6F9; }
+QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
+QPushButton:hover { background-color: #2563EB; }
+QLabel { color: #1E293B; font-weight: bold; }</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
     <property name="geometry">
@@ -22,6 +28,12 @@
       <width>371</width>
       <height>581</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QMainWindow { background-color: #F4F6F9; }
+QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
+QPushButton:hover { background-color: #2563EB; }
+QLabel { color: #1E293B; font-weight: bold; }</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -34,7 +46,7 @@
       <rect>
        <x>130</x>
        <y>20</y>
-       <width>75</width>
+       <width>131</width>
        <height>23</height>
       </rect>
      </property>
@@ -47,7 +59,7 @@
       <rect>
        <x>150</x>
        <y>110</y>
-       <width>121</width>
+       <width>141</width>
        <height>16</height>
       </rect>
      </property>
@@ -148,7 +160,7 @@
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>490</y>
+       <y>500</y>
        <width>151</width>
        <height>23</height>
       </rect>
@@ -162,7 +174,7 @@
       <rect>
        <x>180</x>
        <y>530</y>
-       <width>101</width>
+       <width>131</width>
        <height>23</height>
       </rect>
      </property>
