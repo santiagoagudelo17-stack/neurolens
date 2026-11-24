@@ -101,7 +101,7 @@ for f in ("Visual", "Sound", "Sensitive"):
     vm.pedir_archivo = lambda f=f: os.path.join(DATOS, f"senales_mat/{f}_Cue.mat")
     vm.btnCargarMAT.click()
     ok(vm.comboLlaves.count() >= 1, f"{f}_Cue.mat llaves: {[vm.comboLlaves.itemText(i) for i in range(vm.comboLlaves.count())]}")
-    vm.btnSeleccionarLlave.click()
+    vm.comboLlaves.setCurrentText(f); vm.btnSeleccionarLlave.click()
     ok(vm.labelForma.text().startswith("Forma 3D"), "  " + vm.labelForma.text())
     vm.comboCanal1.setCurrentIndex(0); vm.comboCanal2.setCurrentIndex(5); vm.comboCanal3.setCurrentIndex(10); vm.comboCanal4.setCurrentIndex(20)
     vm.spinMin.setValue(0); vm.spinMax.setValue(1250)
