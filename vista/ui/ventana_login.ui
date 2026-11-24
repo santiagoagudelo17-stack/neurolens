@@ -50,7 +50,7 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Ingresar</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelEstado">

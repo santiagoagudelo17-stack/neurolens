@@ -24,9 +24,9 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>30</y>
-      <width>47</width>
-      <height>13</height>
+      <y>22</y>
+      <width>91</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -37,9 +37,9 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <property name="geometry">
      <rect>
       <x>270</x>
-      <y>30</y>
-      <width>47</width>
-      <height>13</height>
+      <y>22</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -50,13 +50,13 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>120</y>
-      <width>75</width>
-      <height>23</height>
+      <y>102</y>
+      <width>91</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>btnIniciar</string>
+     <string>Iniciar</string>
     </property>
    </widget>
   </widget>
