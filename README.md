@@ -11,7 +11,6 @@ conda create -n neurolens python=3.11
 conda activate neurolens
 pip install -r requirements.txt
 ```
-(Si el profesor indicó otra forma de instalar PyQt en los .md de Teams, úsenla.)
 
 ## Antes de ejecutar
 1. Diseñen los `.ui` en Qt Designer siguiendo `docs/GUIA_DISENO_UI.md` y guárdenlos en `vista/ui/`.
