@@ -230,6 +230,26 @@ class VentanaImagenes(VentanaBase):
     def seleccionar_pestana(self, i):
         self.tabWidget.setCurrentIndex(i)
 
+    def poner_imagen(self, etiqueta, matriz):
+        alto, ancho = matriz.shape
+        imagen = QImage(
+            matriz.data,
+            ancho,
+            alto,
+            ancho,
+            QImage.Format_Grayscale8
+        )
+        pixmap = QPixmap.fromImage(imagen)
+        etiqueta.setPixmap(pixmap)
+
+    def mostrar_aviso(self, titulo, mensaje):
+        QMessageBox.warning(self, titulo, mensaje)
+
+    def mostrar_error(self, titulo, mensaje):
+        QMessageBox.critical(self, titulo, mensaje)
+
+    def mostrar_estado(self, mensaje):
+        self.statusBar().showMessage(mensaje, 5000)
 
 class VentanaSenalesCSV(VentanaBase):
     ARCHIVO_UI = "ventana_senales_csv.ui"
