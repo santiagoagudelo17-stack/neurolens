@@ -6,7 +6,8 @@ encontrar en el .ui. Si falta alguno se lanza UiIncompleta con un mensaje claro.
 import os
 
 import numpy as np
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets
+from vista.utils_ui import cargar_ui_compatible
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem
@@ -29,7 +30,7 @@ class VentanaBase(QMainWindow):
         if not os.path.isfile(ruta):
             raise UiIncompleta(f"Falta el archivo de diseño: {ruta}\n"
                                "Créelo en Qt Designer (ver docs/GUIA_DISENO_UI.md).")
-        uic.loadUi(ruta, self)
+        cargar_ui_compatible(ruta, self)
         self._validar_widgets()
 
     def _validar_widgets(self):

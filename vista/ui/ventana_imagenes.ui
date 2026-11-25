@@ -17,9 +17,9 @@
    <widget class="QLabel" name="lbl_titulo">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>343</width>
+      <x>180</x>
+      <y>10</y>
+      <width>391</width>
       <height>28</height>
      </rect>
     </property>
@@ -36,7 +36,7 @@
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -99,7 +99,7 @@
          <string>Corte: 0 / 0</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignmentFlag::AlignCenter</set>
+         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
         </property>
        </widget>
        <widget class="QTableWidget" name="tableInfo">
@@ -157,7 +157,7 @@
          <string>Sagital</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="btnVoverMenu">
+       <widget class="QPushButton" name="btnVolverMenu">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -234,9 +234,6 @@
               <property name="scaledContents">
                <bool>true</bool>
               </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
              </widget>
             </item>
            </layout>
@@ -262,9 +259,6 @@
               <widget class="QLabel" name="labelAngulo">
                <property name="text">
                 <string>Ángulo: 0°</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -305,9 +299,6 @@
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -433,9 +424,6 @@
             <property name="text">
              <string>Umbral: 127</string>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
            </widget>
            <widget class="QLabel" name="labelKernel">
             <property name="geometry">
@@ -448,9 +436,6 @@
             </property>
             <property name="text">
              <string>Kernel: 3</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
            <widget class="QComboBox" name="comboBinarizacion">
