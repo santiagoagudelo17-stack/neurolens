@@ -32,6 +32,11 @@ class VentanaBase(QMainWindow):
                                "Créelo en Qt Designer (ver docs/GUIA_DISENO_UI.md).")
         cargar_ui_compatible(ruta, self)
         self._validar_widgets()
+        for lbl in self.findChildren(QtWidgets.QLabel):
+            if lbl.pixmap() is None:
+                lbl.setWordWrap(True)
+                lbl.setMinimumWidth(max(lbl.width(), 320))
+                lbl.lower()
 
     def _validar_widgets(self):
         problemas = []
@@ -45,6 +50,19 @@ class VentanaBase(QMainWindow):
             raise UiIncompleta(f"{self.ARCHIVO_UI} no cumple el contrato:\n" + "\n".join(problemas))
 
     # utilidades comunes ------------------------------------------------
+    def showEvent(self, event):
+        super().showEvent(event)
+        for lbl in self.findChildren(QtWidgets.QLabel):
+            if lbl.pixmap() is None and lbl.text():
+                lbl.setWordWrap(True)
+                lbl.adjustSize()
+                if lbl.x() + lbl.width() > self.width() - 20:
+                    lbl.move(max(20, (self.width() - lbl.width()) // 2), lbl.y())
+        for btn in self.findChildren(QtWidgets.QPushButton):
+            if btn.text():
+                btn.adjustSize()
+                btn.resize(btn.width() + 24, max(btn.height(), 32))
+
     def mostrar_error(self, titulo, mensaje):
         QMessageBox.critical(self, titulo, mensaje)
 

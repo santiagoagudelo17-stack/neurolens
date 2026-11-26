@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
@@ -17,10 +17,10 @@
    <widget class="QLabel" name="lbl_titulo">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>10</y>
-      <width>391</width>
-      <height>28</height>
+      <x>20</x>
+      <y>8</y>
+      <width>500</width>
+      <height>35</height>
      </rect>
     </property>
     <property name="font">
@@ -120,13 +120,13 @@
         <property name="columnCount">
          <number>2</number>
         </property>
-        <row/>
-        <row/>
-        <row/>
-        <row/>
-        <row/>
-        <column/>
-        <column/>
+        <row />
+        <row />
+        <row />
+        <row />
+        <row />
+        <column />
+        <column />
        </widget>
        <widget class="QRadioButton" name="radioTransversal">
         <property name="geometry">
@@ -500,8 +500,8 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar" />
  </widget>
- <resources/>
- <connections/>
+ <resources />
+ <connections />
 </ui>
