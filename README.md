@@ -12,11 +12,6 @@ conda activate neurolens
 pip install -r requirements.txt
 ```
 
-## Antes de ejecutar
-1. Diseñen los `.ui` en Qt Designer siguiendo `docs/GUIA_DISENO_UI.md` y guárdenlos en `vista/ui/`.
-2. `python tools/verificar_ui.py` → debe decir *"Todos los .ui cumplen el contrato"*.
-3. Copien los datos del curso a `datos/` (opcional; la app pide la ruta con un diálogo).
-
 ## Ejecutar
 ```
 python main.py
@@ -41,8 +36,6 @@ pruebas/                prueba integral automática (usa un andamio SOLO para te
 tools/verificar_ui.py   comprueba los .ui contra el contrato
 docs/                   diagrama de clases, guías, manual
 ```
-El Modelo no importa PyQt; la Vista no contiene lógica de negocio; el Controlador conecta señales y coordina.
-
 ## Base de datos (SQLite)
 `usuarios`, `sesiones` (id, nombre, rol, fecha-hora de ingreso), `estudios_dicom` (paciente, modalidad, filas, columnas, voxel alto/largo/ancho, matriz de pixeles), `procesamientos` (registro de cada análisis).
 
