@@ -6,34 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>860</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>NeuroLens - Señales CSV</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow { background-color: #F4F6F9; }
 QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
 QPushButton:hover { background-color: #2563EB; }
-QLabel { color: #1E293B; font-weight: bold; }</string>
+QLabel { color: #1E293B; font-weight: bold; }
+QComboBox { background-color: white; color: #1E293B; border: 1px solid #CBD5E1; border-radius: 4px; padding: 3px 8px; }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>371</width>
-      <height>581</height>
+      <x>10</x>
+      <y>10</y>
+      <width>360</width>
+      <height>610</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QMainWindow { background-color: #F4F6F9; }
-QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
-QPushButton:hover { background-color: #2563EB; }
-QLabel { color: #1E293B; font-weight: bold; }</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -44,10 +39,10 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <widget class="QPushButton" name="btnCargarCSV">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>20</y>
-       <width>131</width>
-       <height>23</height>
+       <x>80</x>
+       <y>15</y>
+       <width>200</width>
+       <height>34</height>
       </rect>
      </property>
      <property name="text">
@@ -57,73 +52,141 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <widget class="QLabel" name="labelArchivo">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>110</y>
-       <width>141</width>
-       <height>16</height>
+       <x>30</x>
+       <y>58</y>
+       <width>300</width>
+       <height>20</height>
       </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
      <property name="text">
       <string>Ningún archivo cargado</string>
      </property>
     </widget>
+    <widget class="QLabel" name="lblTituloCanal">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>92</y>
+       <width>200</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Canal (Stem / Histograma):</string>
+     </property>
+    </widget>
     <widget class="QComboBox" name="comboCanal">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>180</y>
-       <width>69</width>
-       <height>22</height>
+       <x>80</x>
+       <y>112</y>
+       <width>200</width>
+       <height>26</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblTituloX">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>146</y>
+       <width>200</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Eje X (Scatter):</string>
      </property>
     </widget>
     <widget class="QComboBox" name="comboX">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>230</y>
-       <width>69</width>
-       <height>22</height>
+       <x>80</x>
+       <y>166</y>
+       <width>200</width>
+       <height>26</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblTituloY">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>200</y>
+       <width>200</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Eje Y (Scatter):</string>
      </property>
     </widget>
     <widget class="QComboBox" name="comboY">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>280</y>
-       <width>69</width>
-       <height>22</height>
+       <x>80</x>
+       <y>220</y>
+       <width>200</width>
+       <height>26</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblTituloCanalA">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>254</y>
+       <width>200</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Canal A (Diferencia):</string>
      </property>
     </widget>
     <widget class="QComboBox" name="comboCanalA">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>340</y>
-       <width>69</width>
-       <height>22</height>
+       <x>80</x>
+       <y>274</y>
+       <width>200</width>
+       <height>26</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblTituloCanalB">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>308</y>
+       <width>200</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Canal B (Diferencia):</string>
      </property>
     </widget>
     <widget class="QComboBox" name="comboCanalB">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>380</y>
-       <width>69</width>
-       <height>22</height>
+       <x>80</x>
+       <y>328</y>
+       <width>200</width>
+       <height>26</height>
       </rect>
      </property>
     </widget>
     <widget class="QPushButton" name="btnGraficarStem">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>410</y>
-       <width>151</width>
-       <height>23</height>
+       <x>80</x>
+       <y>375</y>
+       <width>200</width>
+       <height>34</height>
       </rect>
      </property>
      <property name="text">
@@ -133,10 +196,10 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <widget class="QPushButton" name="btnGraficarHist">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>440</y>
-       <width>141</width>
-       <height>23</height>
+       <x>80</x>
+       <y>417</y>
+       <width>200</width>
+       <height>34</height>
       </rect>
      </property>
      <property name="text">
@@ -146,10 +209,10 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <widget class="QPushButton" name="btnGraficarScatter">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>470</y>
-       <width>141</width>
-       <height>23</height>
+       <x>80</x>
+       <y>459</y>
+       <width>200</width>
+       <height>34</height>
       </rect>
      </property>
      <property name="text">
@@ -159,10 +222,10 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <widget class="QPushButton" name="btnGraficarDiferencia">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>500</y>
-       <width>151</width>
-       <height>23</height>
+       <x>80</x>
+       <y>501</y>
+       <width>200</width>
+       <height>34</height>
       </rect>
      </property>
      <property name="text">
@@ -172,11 +235,14 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <widget class="QPushButton" name="btnVolverMenu">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>530</y>
-       <width>131</width>
-       <height>23</height>
+       <x>80</x>
+       <y>555</y>
+       <width>200</width>
+       <height>34</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #475569; color: white;</string>
      </property>
      <property name="text">
       <string>Volver al menú</string>
@@ -187,19 +253,13 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>9</y>
-      <width>421</width>
-      <height>561</height>
+      <y>10</y>
+      <width>465</width>
+      <height>610</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QMainWindow { background-color: #F4F6F9; }
-QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
-QPushButton:hover { background-color: #2563EB; }
-QLabel { color: #1E293B; font-weight: bold; }</string>
-    </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -208,20 +268,20 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
      <widget class="QPlainTextEdit" name="textInfo">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>211</width>
-        <height>161</height>
+        <x>10</x>
+        <y>10</y>
+        <width>440</width>
+        <height>170</height>
        </rect>
       </property>
      </widget>
      <widget class="QTableWidget" name="tableDescribe">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>170</y>
-        <width>401</width>
-        <height>351</height>
+        <x>10</x>
+        <y>190</y>
+        <width>440</width>
+        <height>380</height>
        </rect>
       </property>
      </widget>
@@ -233,10 +293,10 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
      <widget class="QWidget" name="widgetStem" native="true">
       <property name="geometry">
        <rect>
-        <x>9</x>
-        <y>19</y>
-        <width>341</width>
-        <height>481</height>
+        <x>10</x>
+        <y>10</y>
+        <width>440</width>
+        <height>560</height>
        </rect>
       </property>
      </widget>
@@ -248,10 +308,10 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
      <widget class="QWidget" name="widgetHist" native="true">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>311</width>
-        <height>471</height>
+        <x>10</x>
+        <y>10</y>
+        <width>440</width>
+        <height>560</height>
        </rect>
       </property>
      </widget>
@@ -265,8 +325,8 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>311</width>
-        <height>481</height>
+        <width>440</width>
+        <height>560</height>
        </rect>
       </property>
      </widget>
@@ -280,8 +340,8 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>331</width>
-        <height>491</height>
+        <width>440</width>
+        <height>560</height>
        </rect>
       </property>
      </widget>
@@ -293,7 +353,7 @@ QLabel { color: #1E293B; font-weight: bold; }</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>860</width>
      <height>21</height>
     </rect>
    </property>

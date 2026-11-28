@@ -3,318 +3,145 @@
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1166</width>
-    <height>597</height>
-   </rect>
+   <rect><x>0</x><y>0</y><width>1180</width><height>680</height></rect>
   </property>
-  <property name="windowTitle">
-   <string>MainWindow</string>
-  </property>
+  <property name="windowTitle"><string>NeuroLens - Señales MAT</string></property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow {
-    background-color: #F4F6F9;
-}
-QPushButton {
-    background-color: #1E3A8A;
-    color: white;
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-weight: bold;
-}
-QPushButton:hover {
-    background-color: #2563EB;
-}
-QLabel {
-    color: #1E293B;
-    font-weight: bold;
-}</string>
+   <string notr="true">QMainWindow { background-color: #F4F6F9; }
+QPushButton { background-color: #1E3A8A; color: white; border-radius: 6px; padding: 6px 12px; font-weight: bold; }
+QPushButton:hover { background-color: #2563EB; }
+QLabel { color: #1E293B; font-weight: bold; }
+QComboBox, QSpinBox { background-color: white; color: #1E293B; border: 1px solid #CBD5E1; border-radius: 4px; padding: 2px 6px; }
+QCheckBox { color: #1E293B; font-weight: bold; }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnCargarMAT">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>141</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cargar archivo .mat</string>
-    </property>
+    <property name="geometry"><rect><x>20</x><y>22</y><width>175</width><height>34</height></rect></property>
+    <property name="text"><string>Cargar archivo .mat</string></property>
    </widget>
    <widget class="QLabel" name="labelArchivo">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>20</y>
-      <width>141</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sin archivo seleccionado</string>
-    </property>
+    <property name="geometry"><rect><x>210</x><y>28</y><width>210</width><height>22</height></rect></property>
+    <property name="text"><string>Sin archivo seleccionado</string></property>
+   </widget>
+   <widget class="QLabel" name="lblTituloLlave">
+    <property name="geometry"><rect><x>435</x><y>8</y><width>110</width><height>16</height></rect></property>
+    <property name="text"><string>Llave (.mat):</string></property>
    </widget>
    <widget class="QComboBox" name="comboLlaves">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>20</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
+    <property name="geometry"><rect><x>435</x><y>26</y><width>120</width><height>26</height></rect></property>
    </widget>
    <widget class="QPushButton" name="btnSeleccionarLlave">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>20</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Seleccionar llave</string>
-    </property>
+    <property name="geometry"><rect><x>570</x><y>22</y><width>165</width><height>34</height></rect></property>
+    <property name="text"><string>Seleccionar llave</string></property>
    </widget>
-   <widget class="QLabel" name="labelForma">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>20</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Forma: -</string>
-    </property>
+   <widget class="QLabel" name="labelForma"><property name="wordWrap"><bool>true</bool></property>
+    <property name="geometry"><rect><x>745</x><y>8</y><width>255</width><height>20</height></rect></property>
+    <property name="text"><string>Forma: -</string></property>
+   </widget>
+   <widget class="QLabel" name="lblTituloFs">
+    <property name="geometry"><rect><x>900</x><y>8</y><width>110</width><height>16</height></rect></property>
+    <property name="text"><string></string></property>
    </widget>
    <widget class="QSpinBox" name="spinFs">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>20</y>
-      <width>42</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>10000</number>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboCanal1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboCanal2">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>50</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboCanal3">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>50</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboCanal4">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>50</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinMin">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>50</y>
-      <width>42</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>100000</number>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinMax">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>50</y>
-      <width>42</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>100000</number>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkSuma">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>50</y>
-      <width>51</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Suma</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkResta">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>50</y>
-      <width>51</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Resta</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkMultiplicacion">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>50</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Multiplicación</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnOperar">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>50</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Graficar operación</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="widgetOperacion" native="true">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>50</y>
-      <width>271</width>
-      <height>201</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboEje1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>260</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboEje2">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>260</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnEstadisticas">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>260</y>
-      <width>141</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Calcular estadísticas</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelFormaResultado">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>260</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Forma resultado: -</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="widgetBoxplot" native="true">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>260</y>
-      <width>231</width>
-      <height>131</height>
-     </rect>
-    </property>
+    <property name="geometry"><rect><x>935</x><y>32</y><width>65</width><height>26</height></rect></property>
+    <property name="maximum"><number>10000</number></property>
    </widget>
    <widget class="QPushButton" name="btnVolverMenu">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>260</y>
-      <width>111</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Volver al menú</string>
-    </property>
+    <property name="geometry"><rect><x>1010</x><y>22</y><width>150</width><height>34</height></rect></property>
+    <property name="styleSheet"><string notr="true">background-color: #475569; color: white;</string></property>
+    <property name="text"><string>Volver al menú</string></property>
+   </widget>
+   <widget class="QLabel" name="lblC1">
+    <property name="geometry"><rect><x>20</x><y>74</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Canal 1:</string></property>
+   </widget>
+   <widget class="QComboBox" name="comboCanal1">
+    <property name="geometry"><rect><x>20</x><y>92</y><width>75</width><height>26</height></rect></property>
+   </widget>
+   <widget class="QLabel" name="lblC2">
+    <property name="geometry"><rect><x>105</x><y>74</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Canal 2:</string></property>
+   </widget>
+   <widget class="QComboBox" name="comboCanal2">
+    <property name="geometry"><rect><x>105</x><y>92</y><width>75</width><height>26</height></rect></property>
+   </widget>
+   <widget class="QLabel" name="lblC3">
+    <property name="geometry"><rect><x>190</x><y>74</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Canal 3:</string></property>
+   </widget>
+   <widget class="QComboBox" name="comboCanal3">
+    <property name="geometry"><rect><x>190</x><y>92</y><width>75</width><height>26</height></rect></property>
+   </widget>
+   <widget class="QLabel" name="lblC4">
+    <property name="geometry"><rect><x>275</x><y>74</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Canal 4:</string></property>
+   </widget>
+   <widget class="QComboBox" name="comboCanal4">
+    <property name="geometry"><rect><x>275</x><y>92</y><width>75</width><height>26</height></rect></property>
+   </widget>
+   <widget class="QLabel" name="lblMin">
+    <property name="geometry"><rect><x>370</x><y>74</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Inicio:</string></property>
+   </widget>
+   <widget class="QSpinBox" name="spinMin">
+    <property name="geometry"><rect><x>370</x><y>92</y><width>80</width><height>26</height></rect></property>
+    <property name="maximum"><number>100000</number></property>
+   </widget>
+   <widget class="QLabel" name="lblMax">
+    <property name="geometry"><rect><x>460</x><y>74</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Fin:</string></property>
+   </widget>
+   <widget class="QSpinBox" name="spinMax">
+    <property name="geometry"><rect><x>460</x><y>92</y><width>80</width><height>26</height></rect></property>
+    <property name="maximum"><number>100000</number></property>
+   </widget>
+   <widget class="QCheckBox" name="checkSuma">
+    <property name="geometry"><rect><x>560</x><y>94</y><width>70</width><height>22</height></rect></property>
+    <property name="text"><string>Suma</string></property>
+   </widget>
+   <widget class="QCheckBox" name="checkResta">
+    <property name="geometry"><rect><x>635</x><y>94</y><width>70</width><height>22</height></rect></property>
+    <property name="text"><string>Resta</string></property>
+   </widget>
+   <widget class="QCheckBox" name="checkMultiplicacion">
+    <property name="geometry"><rect><x>710</x><y>94</y><width>120</width><height>22</height></rect></property>
+    <property name="text"><string>Multiplicación</string></property>
+   </widget>
+   <widget class="QPushButton" name="btnOperar">
+    <property name="geometry"><rect><x>845</x><y>88</y><width>185</width><height>34</height></rect></property>
+    <property name="text"><string>Graficar operación</string></property>
+   </widget>
+   <widget class="QWidget" name="widgetOperacion" native="true">
+    <property name="geometry"><rect><x>20</x><y>140</y><width>650</width><height>490</height></rect></property>
+   </widget>
+   <widget class="QLabel" name="lblEje1">
+    <property name="geometry"><rect><x>690</x><y>136</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Eje 1:</string></property>
+   </widget>
+   <widget class="QComboBox" name="comboEje1">
+    <property name="geometry"><rect><x>690</x><y>154</y><width>75</width><height>26</height></rect></property>
+   </widget>
+   <widget class="QLabel" name="lblEje2">
+    <property name="geometry"><rect><x>775</x><y>136</y><width>75</width><height>16</height></rect></property>
+    <property name="text"><string>Eje 2:</string></property>
+   </widget>
+   <widget class="QComboBox" name="comboEje2">
+    <property name="geometry"><rect><x>775</x><y>154</y><width>75</width><height>26</height></rect></property>
+   </widget>
+   <widget class="QPushButton" name="btnEstadisticas">
+    <property name="geometry"><rect><x>865</x><y>150</y><width>185</width><height>34</height></rect></property>
+    <property name="text"><string>Calcular estadísticas</string></property>
+   </widget>
+   <widget class="QLabel" name="labelFormaResultado">
+    <property name="geometry"><rect><x>690</x><y>192</y><width>360</width><height>22</height></rect></property>
+    <property name="text"><string>Forma resultado: -</string></property>
+   </widget>
+   <widget class="QWidget" name="widgetBoxplot" native="true">
+    <property name="geometry"><rect><x>690</x><y>222</y><width>470</width><height>408</height></rect></property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1166</width>
-     <height>21</height>
-    </rect>
-   </property>
+   <property name="geometry"><rect><x>0</x><y>0</y><width>1180</width><height>21</height></rect></property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
