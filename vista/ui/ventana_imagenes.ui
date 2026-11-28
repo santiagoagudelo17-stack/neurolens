@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
@@ -34,10 +34,10 @@ QLabel#labelTitulo {
    <widget class="QLabel" name="lbl_titulo">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>0</y>
-      <width>451</width>
-      <height>51</height>
+        <x>210</x>
+        <y>0</y>
+        <width>451</width>
+        <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -163,13 +163,13 @@ QPushButton:pressed {
         <property name="columnCount">
          <number>2</number>
         </property>
-        <row/>
-        <row/>
-        <row/>
-        <row/>
-        <row/>
-        <column/>
-        <column/>
+        <row />
+        <row />
+        <row />
+        <row />
+        <row />
+        <column />
+        <column />
        </widget>
        <widget class="QRadioButton" name="radioTransversal">
         <property name="geometry">
@@ -579,8 +579,8 @@ QPushButton:pressed {
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar" />
  </widget>
- <resources/>
- <connections/>
+ <resources />
+ <connections />
 </ui>
