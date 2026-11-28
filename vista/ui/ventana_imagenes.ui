@@ -13,21 +13,46 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #EAF4F5;
+}
+
+QLabel#labelTitulo {
+    background-color: #15324B;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+}</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #EAF4F5;</string>
+   </property>
    <widget class="QLabel" name="lbl_titulo">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>10</y>
-      <width>391</width>
-      <height>28</height>
+      <x>210</x>
+      <y>0</y>
+      <width>451</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>-1</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #15324B;
+color: white;
+font-size: 24px;
+font-weight: bold;
+padding: 12px;
+border-radius: 8px;</string>
     </property>
     <property name="text">
      <string>ANÁLISIS DE IMÁGENES MÉDICAS</string>
@@ -63,11 +88,29 @@
        <widget class="QPushButton" name="btnCargarCarpeta">
         <property name="geometry">
          <rect>
-          <x>60</x>
+          <x>50</x>
           <y>10</y>
-          <width>141</width>
-          <height>31</height>
+          <width>161</width>
+          <height>41</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #176B87;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #39B8B0;
+}
+
+QPushButton:pressed {
+    background-color: #15324B;
+}</string>
         </property>
         <property name="text">
          <string>Cargar estudio DICOM</string>
@@ -76,8 +119,8 @@
        <widget class="QLabel" name="labelCarpeta">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>50</y>
+          <x>20</x>
+          <y>60</y>
           <width>163</width>
           <height>16</height>
          </rect>
@@ -162,9 +205,27 @@
          <rect>
           <x>10</x>
           <y>453</y>
-          <width>141</width>
+          <width>171</width>
           <height>31</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #176B87;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #39B8B0;
+}
+
+QPushButton:pressed {
+    background-color: #15324B;
+}</string>
         </property>
         <property name="text">
          <string>Volver al menú principal </string>
@@ -212,6 +273,24 @@
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #20B2AA;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #39B8B0;
+}
+
+QPushButton:pressed {
+    background-color: #15324B;
+}</string>
+          </property>
           <property name="currentIndex">
            <number>3</number>
           </property>
@@ -251,7 +330,7 @@
               <x>10</x>
               <y>10</y>
               <width>411</width>
-              <height>440</height>
+              <height>456</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
